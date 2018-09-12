@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="./app.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDgmmOyAI5qEOUcouxhSs4Tn5a4DZ3oj-o",
+            authDomain: "luckykhel-cff91.firebaseapp.com",
+            databaseURL: "https://luckykhel-cff91.firebaseio.com",
+            projectId: "luckykhel-cff91",
+            storageBucket: "luckykhel-cff91.appspot.com",
+            messagingSenderId: "794965518169"
+        };
+        firebase.initializeApp(config);
+
+
+        export const inicializarFirebase = () => {
+            firebase.initializeApp({
+                messagingSenderId: 'your messagingSenderId'
+            });
+            navigator.serviceWorker
+                .register('/my-sw.js')
+                .then((registration) => {
+                    firebase.messaging().useServiceWorker(registration);
+                });
+        }
+
+        export const askForPermissioToReceiveNotifications = async () => {
+            try {
+                const messaging = firebase.messaging();
+                await messaging.requestPermission();
+                const token = await messaging.getToken();
+                console.log('token do usuário:', token);
+
+                return token;
+            } catch (error) {
+                console.error(error);
+            }
+        } -->
+
+    </script>
+
+</head>
+
+
+</html>
